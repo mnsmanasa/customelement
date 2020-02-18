@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +18,17 @@
   }
 
   window.customElements.define('date-range-calendar', DateRangeCalendar);
-  
+ /* 	var button = document.querySelector("button");
+button.onclick = () => {
+    var input = document.querySelector("#from-date");
+    input.focus()
+    input.click()
+}*/
   function triggerCalendar(){
-    document.getElementById('from-date').focus()
+    //document.getElementById('from-date').focus()
+   var input = document.querySelector("#from-date");
+    input.focus()
+    input.click()
   }
 
 	</script>
@@ -48,11 +57,13 @@
 </head>
 
 <body>
-	<div class='date-range' onClick='triggerCalendar()'>
+
+  <div class='date-range' id='daterangeDiv'>
 		<date-range-calendar data-id='from-date'></date-range-calendar>
 		<date-range-calendar data-id='to-date'></date-range-calendar>
 		<span class='arrow-down'></span>
 	</div>
+  <button onclick="triggerCalendar()">display date</button>
 </body>
 
 </html>
